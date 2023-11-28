@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { ApolloProvider } from '@apollo/client';
 
 import createApolloClient from '../apollo-client';
@@ -12,6 +13,11 @@ export default ({
 
   return (
     <ApolloProvider client={apolloClient}>
+      <Head>
+        <title>SpaceX Launches</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
       <Component {...pageProps} />
     </ApolloProvider>
   );
