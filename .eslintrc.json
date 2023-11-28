@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "next"
+  ],
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "func-names": "off",
+    "import/no-anonymous-default-export": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-extra-semi": "off",
+    "react/display-name": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
+}

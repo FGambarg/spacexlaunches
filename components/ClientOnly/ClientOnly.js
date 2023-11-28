@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
-export default ({
+export default function ({
   children,
   ...delegated
-}) => {
+}) {
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
