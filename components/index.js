@@ -1,9 +1,9 @@
-import ClientOnly from './ClientOnly/ClientOnly';
 import LaunchCard from './LaunchCard/LaunchCard';
 import LoadingIndicator from './LoadingIndicator/LoadingIndicator';
+import Logo from './Logo/Logo';
 
 export {
-  ClientOnly,
   LaunchCard,
   LoadingIndicator,
+  Logo,
 };
