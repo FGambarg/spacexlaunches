@@ -72,7 +72,7 @@ export default function () {
       </div>
 
       <button
-        className={`p-4 bg-white border-2 border-violet-800 rounded-xl shadow-lg flex items-center justify-center mt-1 h-16 w-36 hover:border-black${loading ? ' cursor-not-allowed' : ' cursor-pointer active:bg-slate-200'}`}
+        className={`p-4 bg-white border-2 border-violet-800 rounded-xl shadow-lg flex items-center justify-center mt-1 h-16 w-36 hover:border-black cursor-pointer ${loading ? ' cursor-not-allowed' : ' active:bg-slate-200'}`}
         disabled={loading}
         onClick={() => {
           fetchMore({
