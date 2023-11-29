@@ -9,7 +9,7 @@ const LAUNCHES_TO_SHOW = 4;
 // TODO: Move query to separate file?
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery($offset: Int!, $limit: Int!) {
-    launches(offset: $offset, limit: $limit, order: "launch_date_unix") {
+    launches(offset: $offset, limit: $limit) {
       id
       details
       launch_date_unix
@@ -76,8 +76,7 @@ export default function () {
           </div>
 
           <button
-            className='p-4 bg-white border-2 border-slate-400 rounded-xl shadow-lg flex items-center justify-center mt-1 h-16 w-36 hover:border-black active:bg-slate-200'
-            // TODO  + loading ? ' cursor-not-allowed' : ' cursor-pointer'}
+            className={`p-4 bg-white border-2 border-violet-800 rounded-xl shadow-lg flex items-center justify-center mt-1 h-16 w-36 hover:border-black${loading ? ' cursor-not-allowed' : ' cursor-pointer active:bg-slate-200'}`}
             disabled={loading}
             onClick={() => {
               fetchMore({
@@ -90,7 +89,7 @@ export default function () {
             {
               loading
                 ? <LoadingIndicator />
-                : <span className='text-xl'>Load More</span>
+                : <span className='text-xl text-violet-800'>Load More</span>
             }
           </button>
         </main>
