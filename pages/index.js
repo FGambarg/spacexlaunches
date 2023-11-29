@@ -42,7 +42,7 @@ export default function () {
   }, [data]);
 
   return (
-    <div className='flex items-center min-h-screen flex-col p-8'>
+    <main className='flex items-center min-h-screen flex-col p-8'>
       <div className='mb-8 w-full bg-slate-100 rounded-xl pt-2 border-2 border-solid border-black'>
         <div className='pb-2'>
           <Logo />
@@ -88,6 +88,6 @@ export default function () {
             : <span className='text-xl text-violet-800'>Load More</span>
         }
       </button>
-    </div>
+    </main>
   );
 };

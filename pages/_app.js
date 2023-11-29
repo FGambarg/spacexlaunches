@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { ApolloProvider } from '@apollo/client';
 
 import createApolloClient from '../apollo-client';
+import { ErrorBoundary } from '../components';
 
 import '../globals.css';
 
@@ -18,8 +19,9 @@ export default function ({
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      {/* // eslint-disable-next-line */}
-      <Component {...pageProps} />
+      <ErrorBoundary>
+        <Component {...pageProps} />
+      </ErrorBoundary>
     </ApolloProvider>
   );
 };

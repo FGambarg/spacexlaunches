@@ -13,6 +13,7 @@
     "no-extra-semi": "off",
     "no-nested-ternary": "off",
     "react/display-name": "off",
+    "react/destructuring-assignment": "off",
     "react/function-component-definition": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off"
