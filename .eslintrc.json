@@ -9,6 +9,7 @@
     "arrow-parens": ["error", "as-needed"],
     "func-names": "off",
     "import/no-anonymous-default-export": "off",
+    "import/prefer-default-export": "off",
     "jsx-quotes": ["error", "prefer-single"],
     "no-extra-semi": "off",
     "no-nested-ternary": "off",

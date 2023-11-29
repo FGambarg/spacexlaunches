@@ -8,14 +8,7 @@ const LAUNCHES_TO_SHOW = 4;
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery($offset: Int!, $limit: Int!) {
     launches(offset: $offset, limit: $limit) {
-      __typename
-      id
-      launch_date_unix
-      launch_site {
-        site_name
-      }
-      launch_success
-      mission_name
+      ...LaunchCoreFields
       rocket {
         rocket_name
       }

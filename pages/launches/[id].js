@@ -6,15 +6,8 @@ import { LoadingIndicator, Logo } from '../../components';
 const LAUNCH_QUERY = gql`
   query LaunchQuery($launchId: ID!) {
     launch(id: $launchId) {
-      __typename
+      ...LaunchCoreFields
       details
-      id
-      launch_date_unix
-      launch_site {
-        site_name
-      }
-      launch_success
-      mission_name
       rocket {
         rocket {
           __typename
@@ -54,7 +47,7 @@ export default function () {
           ? <LoadingIndicator />
 
           : (
-            <div className='p-4 max-w-sm bg-white border-2 border-black rounded-xl shadow-lg flex flex-col items-center w-1/5 basis-1/5 mx-2'>
+            <div className='p-4 bg-white border-2 border-black rounded-xl shadow-lg flex flex-col items-center w-96 mx-2'>
               <span className='text-center text-xl mb-1'>{ launch.mission_name }</span>
               <span className='text-center text-base text-slate-800'>{ launch.rocket.rocket_name }</span>
 
